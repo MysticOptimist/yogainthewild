@@ -1,0 +1,393 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+// Placeholders — update before launch
+const e8YogaLink = '#';
+const yogaPodLink = '#';
+const contactEmail = '';
+const eventDate = 'Coming Fall 2026';
+---
+
+<Layout title="Yoga in the Wild — A Practice with Purpose">
+<div style="background:#F4EEE2; overflow-x:hidden;">
+
+  <!-- ============ HEADER ============ -->
+  <header style="position:sticky; top:0; z-index:50; background:rgba(244,238,226,0.88); backdrop-filter:blur(10px); border-bottom:1px solid rgba(43,58,45,0.10);">
+    <div style="max-width:1180px; margin:0 auto; padding:16px 24px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+      <a href="#top" style="display:flex; align-items:center; gap:11px;">
+        <span style="width:30px; height:30px; border-radius:50%; border:1.5px solid #2B3A2D; display:inline-flex; align-items:center; justify-content:center;">
+          <span style="width:8px; height:8px; border-radius:50%; background:#B58A47;"></span>
+        </span>
+        <span style="font-family:'Lora',serif; font-size:20px; font-weight:600; letter-spacing:0.01em; color:#2B3A2D;">Yoga in the Wild</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" style="display:flex; align-items:center; gap:30px; flex-wrap:wrap;">
+        <a href="#about" style="font-size:14.5px; color:#4A4A42; font-weight:500;">About</a>
+        <a href="#schedule" style="font-size:14.5px; color:#4A4A42; font-weight:500;">Schedule</a>
+        <a href="#included" style="font-size:14.5px; color:#4A4A42; font-weight:500;">What's Included</a>
+        <a href="#sanctuary" style="font-size:14.5px; color:#4A4A42; font-weight:500;">Sanctuary</a>
+        <a href="#register" style="font-size:14.5px; color:#4A4A42; font-weight:500;">Studios</a>
+        <a href="#faq" style="font-size:14.5px; color:#4A4A42; font-weight:500;">FAQ</a>
+        <a href="#register" class="btn-pill" style="font-size:14px; font-weight:600; color:#FBF8F1; background:#2B3A2D; padding:10px 20px;">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="top" style="position:relative; min-height:92vh; display:flex; align-items:flex-end; padding:0;">
+    <img src="/assets/bear-walkway.jpg" alt="A rescued bear grazing beneath the elevated walkway at The Wild Animal Sanctuary" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 38%;" loading="eager" />
+    <div style="position:absolute; inset:0; background:linear-gradient(100deg, rgba(28,38,29,0.86) 0%, rgba(28,38,29,0.55) 38%, rgba(28,38,29,0.12) 66%, rgba(28,38,29,0.05) 100%);"></div>
+    <div style="position:relative; max-width:1180px; margin:0 auto; width:100%; padding:clamp(40px,7vw,96px) 24px clamp(48px,6vw,80px);">
+      <div style="max-width:720px;">
+        <p style="margin:0 0 22px; font-size:13px; letter-spacing:0.22em; text-transform:uppercase; font-weight:600; color:#D8C28C;">A one-day yoga fundraiser</p>
+        <h1 style="margin:0; font-family:'Lora',serif; font-weight:500; color:#FBF8F1; font-size:clamp(44px,7.5vw,86px); line-height:0.98; letter-spacing:-0.01em; white-space:nowrap;">Yoga in the Wild</h1>
+        <p style="margin:18px 0 0; font-family:'Lora',serif; font-style:italic; font-size:clamp(22px,3vw,30px); color:#E7D9B6; font-weight:400;">A Practice with Purpose</p>
+        <p style="margin:26px 0 0; font-size:clamp(16px,1.4vw,18px); line-height:1.65; color:rgba(251,248,241,0.92); max-width:540px;">A day of movement, compassion, and conservation at The Wild Animal Sanctuary in Keenesburg, Colorado. Your registration includes one yoga class and a full-day sanctuary pass.</p>
+
+        <div style="display:flex; flex-wrap:wrap; gap:10px; margin:30px 0 0;">
+          <span style="display:inline-flex; align-items:center; gap:7px; font-size:13.5px; font-weight:500; color:#FBF8F1; background:rgba(251,248,241,0.12); border:1px solid rgba(251,248,241,0.28); padding:8px 15px; border-radius:999px;">Fall 2026</span>
+          <span style="display:inline-flex; align-items:center; gap:7px; font-size:13.5px; font-weight:500; color:#FBF8F1; background:rgba(251,248,241,0.12); border:1px solid rgba(251,248,241,0.28); padding:8px 15px; border-radius:999px;">Keenesburg, CO</span>
+          <span style="display:inline-flex; align-items:center; gap:7px; font-size:13.5px; font-weight:500; color:#FBF8F1; background:rgba(251,248,241,0.12); border:1px solid rgba(251,248,241,0.28); padding:8px 15px; border-radius:999px;">$100 per person</span>
+          <span style="display:inline-flex; align-items:center; gap:7px; font-size:13.5px; font-weight:500; color:#FBF8F1; background:rgba(251,248,241,0.12); border:1px solid rgba(251,248,241,0.28); padding:8px 15px; border-radius:999px;">Ages 14+</span>
+        </div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:14px; margin:32px 0 0;">
+          <a href="#register" class="btn-pill" style="font-size:15.5px; color:#2B3A2D; background:#E7D9B6; padding:15px 28px;">Register for a Class</a>
+          <a href="#sanctuary" class="btn-pill" style="font-size:15.5px; font-weight:500; color:#FBF8F1; border:1.5px solid rgba(251,248,241,0.45); padding:15px 26px;">Learn About the Sanctuary</a>
+        </div>
+        <p style="margin:26px 0 0; font-size:14px; color:rgba(251,248,241,0.82); display:flex; align-items:center; gap:9px;">
+          <span style="width:7px; height:7px; border-radius:50%; background:#B58A47;"></span>
+          100% of event proceeds go to The Wild Animal Sanctuary.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AT A GLANCE ============ -->
+  <section id="details" style="padding:clamp(48px,6vw,72px) 24px;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div data-reveal class="gridline-container" style="grid-template-columns:repeat(auto-fit, minmax(min(100%, 320px), 1fr));">
+        <div class="gridline-cell">
+          <p class="eyebrow eyebrow--sm" style="margin-bottom:10px;">Date</p>
+          <p style="margin:0; font-family:'Lora',serif; font-size:21px; color:#2B3A2D; line-height:1.25;">{eventDate}</p>
+          <p style="margin:8px 0 0; font-size:14px; color:#6B6B5F; line-height:1.5;">A Saturday or Sunday, mid-August to mid-October.</p>
+        </div>
+        <div class="gridline-cell">
+          <p class="eyebrow eyebrow--sm" style="margin-bottom:10px;">Location</p>
+          <p style="margin:0; font-family:'Lora',serif; font-size:21px; color:#2B3A2D; line-height:1.25;">The Wild Animal Sanctuary</p>
+          <p style="margin:8px 0 0; font-size:14px; color:#6B6B5F; line-height:1.5;">Keenesburg, Colorado.</p>
+        </div>
+        <div class="gridline-cell">
+          <p class="eyebrow eyebrow--sm" style="margin-bottom:10px;">Cost</p>
+          <p style="margin:0; font-family:'Lora',serif; font-size:21px; color:#2B3A2D; line-height:1.25;">$100 per participant</p>
+          <p style="margin:8px 0 0; font-size:14px; color:#6B6B5F; line-height:1.5;">Every dollar supports the Sanctuary.</p>
+        </div>
+        <div class="gridline-cell">
+          <p class="eyebrow eyebrow--sm" style="margin-bottom:10px;">Includes</p>
+          <p style="margin:0; font-family:'Lora',serif; font-size:21px; color:#2B3A2D; line-height:1.25;">One class + full-day pass</p>
+          <p style="margin:8px 0 0; font-size:14px; color:#6B6B5F; line-height:1.5;">A 60-minute yoga class and sanctuary admission.</p>
+        </div>
+        <div class="gridline-cell">
+          <p class="eyebrow eyebrow--sm" style="margin-bottom:10px;">Who Can Attend</p>
+          <p style="margin:0; font-family:'Lora',serif; font-size:21px; color:#2B3A2D; line-height:1.25;">Adults & youth 14+</p>
+          <p style="margin:8px 0 0; font-size:14px; color:#6B6B5F; line-height:1.5;">Youth ages 14+ with parental permission.</p>
+        </div>
+        <div class="gridline-cell">
+          <p class="eyebrow eyebrow--sm" style="margin-bottom:10px;">Fundraising Goal</p>
+          <p style="margin:0; font-family:'Lora',serif; font-size:21px; color:#2B3A2D; line-height:1.25;">$10,000 raised</p>
+          <p style="margin:8px 0 0; font-size:14px; color:#6B6B5F; line-height:1.5;">For rescued wild animals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" style="padding:clamp(52px,5.5vw,76px) 24px; background:#E3E8D6;">
+    <div data-reveal style="max-width:1080px; margin:0 auto;">
+      <p class="eyebrow" style="margin-bottom:20px;">About the event</p>
+      <h2 class="section-heading" style="font-size:clamp(30px,4.2vw,48px); line-height:1.06;">A day of yoga, compassion, and conservation</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:clamp(28px,4vw,56px); margin-top:clamp(36px,4vw,52px); padding-top:clamp(30px,3vw,40px); border-top:1px solid rgba(43,58,45,0.18);">
+        <p style="margin:0; font-size:clamp(18px,1.5vw,20px); line-height:1.7; color:#2B3A2D;">Yoga in the Wild is a collaborative one-day fundraiser bringing together Longmont-area yoga studios and community members in support of The Wild Animal Sanctuary. Participants choose one 60-minute class and receive a full-day pass to explore the elevated walkway, Welcome Center, and Education Center.</p>
+        <div>
+          <p style="margin:0; font-size:17px; line-height:1.75; color:#5A5A50;">The day connects the values of yoga — especially <em style="font-style:italic; color:#2B3A2D;">ahimsa</em>, or non-harming — with practical action on behalf of rescued wild animals.</p>
+          <p style="margin:26px 0 0; padding-left:22px; border-left:2px solid #B58A47; font-family:'Lora',serif; font-style:italic; font-size:clamp(20px,1.9vw,25px); line-height:1.35; color:#2B3A2D;">We move with purpose, and we practice in service.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MISSION / IMPACT (tiger) ============ -->
+  <section style="padding:clamp(12px,2vw,28px) 24px clamp(56px,6vw,84px); background:#E3E8D6;">
+    <div data-reveal style="max-width:1180px; margin:0 auto; border-radius:20px; overflow:hidden; position:relative; min-height:clamp(420px,52vw,560px); display:flex; align-items:flex-end;">
+      <img src="/assets/tiger-mountains.jpg" alt="A rescued tiger walking through prairie grass with the snowcapped Rocky Mountains behind" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 85%;" loading="lazy" />
+      <div style="position:absolute; inset:0; background:linear-gradient(0deg, rgba(28,38,29,0.88) 0%, rgba(28,38,29,0.35) 42%, rgba(28,38,29,0.05) 100%);"></div>
+      <div style="position:relative; padding:clamp(32px,5vw,56px); max-width:680px;">
+        <p class="eyebrow eyebrow--light">Why it matters</p>
+        <h2 class="section-heading" style="color:#FBF8F1; font-size:clamp(28px,3.6vw,44px);">Every registration supports lifelong care</h2>
+        <p style="margin:20px 0 0; font-size:17px; line-height:1.7; color:rgba(251,248,241,0.92);">The Wild Animal Sanctuary rescues and provides lifelong homes for large, exotic, and endangered captive wild animals — offering hundreds of rescued animals space, care, dignity, and safety.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCHEDULE ============ -->
+  <section id="schedule" style="padding:clamp(64px,8vw,104px) 24px;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div data-reveal style="max-width:640px; margin-bottom:48px;">
+        <p class="eyebrow">Class schedule</p>
+        <h2 class="section-heading" style="font-size:clamp(30px,4vw,46px);">Choose one 60-minute class</h2>
+        <p style="margin:18px 0 0; font-size:17px; line-height:1.7; color:#4A4A42;">Arrive 30-60 minutes before your class — or earlier in the day to explore. The Sanctuary opens at 9:00 AM.</p>
+      </div>
+      <div data-reveal style="border-top:1px solid rgba(43,58,45,0.16);">
+        <div style="display:flex; align-items:baseline; gap:clamp(16px,4vw,48px); padding:24px 4px; border-bottom:1px solid rgba(43,58,45,0.12); flex-wrap:wrap;">
+          <span style="font-family:'Lora',serif; font-size:22px; color:#B58A47; min-width:108px; font-weight:500;">10:00 AM</span>
+          <span style="font-size:19px; color:#2B3A2D; font-weight:500;">Vinyasa</span>
+        </div>
+        <div style="display:flex; align-items:baseline; gap:clamp(16px,4vw,48px); padding:24px 4px; border-bottom:1px solid rgba(43,58,45,0.12); flex-wrap:wrap;">
+          <span style="font-family:'Lora',serif; font-size:22px; color:#B58A47; min-width:108px; font-weight:500;">12:00 PM</span>
+          <span style="font-size:19px; color:#2B3A2D; font-weight:500;">Power Vinyasa</span>
+        </div>
+        <div style="display:flex; align-items:baseline; gap:clamp(16px,4vw,48px); padding:24px 4px; border-bottom:1px solid rgba(43,58,45,0.12); flex-wrap:wrap; background:rgba(183,138,71,0.07);">
+          <span style="font-family:'Lora',serif; font-size:22px; color:#B58A47; min-width:108px; font-weight:500;">1:30 PM</span>
+          <span style="display:flex; flex-direction:column; gap:4px;">
+            <span style="font-size:19px; color:#2B3A2D; font-weight:500;">Speaker, donation presentation & raffle</span>
+            <span style="font-size:14.5px; color:#6B6B5F;">A short community moment for everyone — not a yoga class.</span>
+          </span>
+        </div>
+        <div style="display:flex; align-items:baseline; gap:clamp(16px,4vw,48px); padding:24px 4px; border-bottom:1px solid rgba(43,58,45,0.12); flex-wrap:wrap;">
+          <span style="font-family:'Lora',serif; font-size:22px; color:#B58A47; min-width:108px; font-weight:500;">3:00 PM</span>
+          <span style="font-size:19px; color:#2B3A2D; font-weight:500;">Gentle / Beginner Vinyasa</span>
+        </div>
+        <div style="display:flex; align-items:baseline; gap:clamp(16px,4vw,48px); padding:24px 4px; border-bottom:1px solid rgba(43,58,45,0.12); flex-wrap:wrap;">
+          <span style="font-family:'Lora',serif; font-size:22px; color:#B58A47; min-width:108px; font-weight:500;">5:00 PM</span>
+          <span style="font-size:19px; color:#2B3A2D; font-weight:500;">Vinyasa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INCLUDED + EXPERIENCE ============ -->
+  <section id="included" style="padding:clamp(64px,8vw,104px) 24px; background:#EDE5D4;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div data-reveal style="margin-bottom:clamp(48px,6vw,72px);">
+        <div style="margin-bottom:clamp(28px,4vw,42px);">
+          <p class="eyebrow">What's included</p>
+          <h2 class="section-heading" style="font-size:clamp(28px,3.6vw,42px); line-height:1.1;">Your registration includes</h2>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:clamp(32px,5vw,64px); align-items:stretch;">
+          <div style="border-radius:16px; overflow:hidden; min-height:clamp(260px,30vw,340px); position:relative;">
+            <img src="/assets/lions.jpg" alt="Two rescued lions resting in the prairie grass at The Wild Animal Sanctuary" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 40%;" loading="lazy" />
+          </div>
+          <div style="display:flex; flex-direction:column; gap:2px; justify-content:center;">
+            <div style="display:flex; gap:14px; padding:14px 0; border-bottom:1px solid rgba(43,58,45,0.14);"><span style="color:#B58A47; font-size:18px; line-height:1.5;">&#10022;</span><span style="font-size:17px; line-height:1.5; color:#3C3C34;">One 60-minute yoga class</span></div>
+            <div style="display:flex; gap:14px; padding:14px 0; border-bottom:1px solid rgba(43,58,45,0.14);"><span style="color:#B58A47; font-size:18px; line-height:1.5;">&#10022;</span><span style="font-size:17px; line-height:1.5; color:#3C3C34;">Full-day admission to The Wild Animal Sanctuary</span></div>
+            <div style="display:flex; gap:14px; padding:14px 0; border-bottom:1px solid rgba(43,58,45,0.14);"><span style="color:#B58A47; font-size:18px; line-height:1.5;">&#10022;</span><span style="font-size:17px; line-height:1.5; color:#3C3C34;">Access to the 1.5-mile elevated walkway</span></div>
+            <div style="display:flex; gap:14px; padding:14px 0;"><span style="color:#B58A47; font-size:18px; line-height:1.5;">&#10022;</span><span style="font-size:17px; line-height:1.5; color:#3C3C34;">A chance to support rescued animals through direct community action</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal>
+        <p class="eyebrow" style="margin-bottom:28px;">What to expect</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:18px;">
+          <div style="background:#FBF8F1; border-radius:14px; padding:26px;">
+            <span style="font-family:'Lora',serif; font-size:30px; color:#B58A47;">1</span>
+            <h3 style="margin:10px 0 8px; font-family:'Lora',serif; font-size:19px; color:#2B3A2D; font-weight:600;">Arrive & check in</h3>
+            <p style="margin:0; font-size:15px; line-height:1.6; color:#5A5A50;">Check in at the main ticket booth at the Welcome Center with your registration confirmation.</p>
+          </div>
+          <div style="background:#FBF8F1; border-radius:14px; padding:26px;">
+            <span style="font-family:'Lora',serif; font-size:30px; color:#B58A47;">2</span>
+            <h3 style="margin:10px 0 8px; font-family:'Lora',serif; font-size:19px; color:#2B3A2D; font-weight:600;">Explore the Sanctuary</h3>
+            <p style="margin:0; font-size:15px; line-height:1.6; color:#5A5A50;">Spend as much time as you like along the elevated walkway, Education Center, and public spaces.</p>
+          </div>
+          <div style="background:#FBF8F1; border-radius:14px; padding:26px;">
+            <span style="font-family:'Lora',serif; font-size:30px; color:#B58A47;">3</span>
+            <h3 style="margin:10px 0 8px; font-family:'Lora',serif; font-size:19px; color:#2B3A2D; font-weight:600;">Take your class</h3>
+            <p style="margin:0; font-size:15px; line-height:1.6; color:#5A5A50;">Classes are held indoors on the Mezzanine in the Welcome Center, overlooking the walkway.</p>
+          </div>
+          <div style="background:#FBF8F1; border-radius:14px; padding:26px;">
+            <span style="font-family:'Lora',serif; font-size:30px; color:#B58A47;">4</span>
+            <h3 style="margin:10px 0 8px; font-family:'Lora',serif; font-size:19px; color:#2B3A2D; font-weight:600;">Join the community moment</h3>
+            <p style="margin:0; font-size:15px; line-height:1.6; color:#5A5A50;">A short speaker presentation, donation presentation, and raffle drawing at 1:30 PM.</p>
+          </div>
+          <div style="background:#FBF8F1; border-radius:14px; padding:26px;">
+            <span style="font-family:'Lora',serif; font-size:30px; color:#B58A47;">5</span>
+            <h3 style="margin:10px 0 8px; font-family:'Lora',serif; font-size:19px; color:#2B3A2D; font-weight:600;">Support further</h3>
+            <p style="margin:0; font-size:15px; line-height:1.6; color:#5A5A50;">Become a member, make a donation, or visit the gift shop to support the Sanctuary onsite.</p>
+          </div>
+        </div>
+        <div class="gridline-container" style="margin-top:40px; grid-template-columns:repeat(auto-fit, minmax(260px,1fr));">
+          <div class="gridline-cell" style="display:flex; align-items:center; justify-content:center; gap:20px;">
+            <span style="font-family:'Lora',serif; font-size:40px; color:#B58A47; line-height:1; min-width:46px; text-align:center;">60</span>
+            <div>
+              <p style="margin:0; font-size:16px; font-weight:600; color:#2B3A2D;">Minutes per class</p>
+              <p style="margin:5px 0 0; font-size:14.5px; line-height:1.5; color:#6B6B5F;">Each yoga session runs a full hour.</p>
+            </div>
+          </div>
+          <div class="gridline-cell" style="display:flex; align-items:center; justify-content:center; gap:20px;">
+            <span style="font-family:'Lora',serif; font-size:34px; color:#B58A47; line-height:1; min-width:46px; text-align:center;">&#10022;</span>
+            <div>
+              <p style="margin:0; font-size:16px; font-weight:600; color:#2B3A2D;">Bring your own mat</p>
+              <p style="margin:5px 0 0; font-size:14.5px; line-height:1.5; color:#6B6B5F;">Mats are not provided onsite.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SANCTUARY ============ -->
+  <section id="sanctuary" style="padding:clamp(64px,8vw,104px) 24px;">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:clamp(32px,5vw,72px); align-items:start;">
+      <div data-reveal>
+        <p class="eyebrow">The venue</p>
+        <h2 class="section-heading" style="font-size:clamp(30px,4vw,46px);">About The Wild Animal Sanctuary</h2>
+        <p style="margin:22px 0 0; font-size:18px; line-height:1.75; color:#4A4A42;">Located in Keenesburg, Colorado, the Sanctuary provides large-acreage habitats and lifelong care for rescued captive wild animals. Visitors experience it from an elevated walkway designed to allow viewing without disturbing the animals.</p>
+        <a href="https://www.wildanimalsanctuary.org" target="_blank" rel="noopener" class="link-gold" style="margin-top:26px;">Visit WildAnimalSanctuary.org &rarr;</a>
+      </div>
+      <div data-reveal class="gridline-container" style="grid-template-columns:1fr; border-radius:14px;">
+        <div class="gridline-cell" style="padding:18px 22px;"><span style="font-size:16px; color:#3C3C34;">1.5-mile elevated walkway</span></div>
+        <div class="gridline-cell" style="padding:18px 22px;"><span style="font-size:16px; color:#3C3C34;">Welcome Center with food, shops, restrooms & rest areas</span></div>
+        <div class="gridline-cell" style="padding:18px 22px;"><span style="font-size:16px; color:#3C3C34;">Education Center on rescue & the captive wildlife crisis</span></div>
+        <div class="gridline-cell" style="padding:18px 22px;"><span style="font-size:16px; color:#3C3C34;">Indoor Mezzanine yoga space</span></div>
+        <div class="gridline-cell" style="padding:18px 22px;"><span style="font-size:16px; color:#3C3C34;">Self-guided experience with volunteers throughout</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REGISTER (studios) ============ -->
+  <section id="register" style="padding:clamp(64px,8vw,104px) 24px; background:#2B3A2D;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div data-reveal style="max-width:680px; margin-bottom:48px;">
+        <p class="eyebrow eyebrow--light">Register</p>
+        <h2 class="section-heading" style="color:#FBF8F1; font-size:clamp(30px,4vw,46px);">Register through a participating studio</h2>
+        <p style="margin:20px 0 0; font-size:18px; line-height:1.7; color:rgba(251,248,241,0.85);">Two Longmont-area yoga studios are hosting classes for this first-ever event. Each studio manages registration and ticketing through its own website — choose a studio to reserve your spot.</p>
+      </div>
+      <div data-reveal style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px;">
+        <div style="background:#FBF8F1; border-radius:18px; padding:36px 32px; display:flex; flex-direction:column;">
+          <span class="eyebrow eyebrow--sm" style="margin-bottom:0;">Participating studio</span>
+          <h3 style="margin:12px 0 0; font-family:'Lora',serif; font-size:30px; color:#2B3A2D; font-weight:600;">E8 Yoga</h3>
+          <p style="margin:14px 0 0; font-size:15.5px; line-height:1.6; color:#5A5A50; flex:1;">Class time and teacher to be confirmed. Tickets are hosted on E8 Yoga's website.</p>
+          <a href={e8YogaLink} class="btn-pill" style="margin-top:26px; font-size:15.5px; color:#FBF8F1; background:#2B3A2D; padding:15px 24px;">Register through E8 Yoga &rarr;</a>
+          <span style="margin-top:12px; font-size:13px; color:#8A8A7C;">Ticketing link coming soon.</span>
+        </div>
+        <div style="background:#FBF8F1; border-radius:18px; padding:36px 32px; display:flex; flex-direction:column;">
+          <span class="eyebrow eyebrow--sm" style="margin-bottom:0;">Participating studio</span>
+          <h3 style="margin:12px 0 0; font-family:'Lora',serif; font-size:30px; color:#2B3A2D; font-weight:600;">Yoga Pod</h3>
+          <p style="margin:14px 0 0; font-size:15.5px; line-height:1.6; color:#5A5A50; flex:1;">Class time and teacher to be confirmed. Tickets are hosted on Yoga Pod's website.</p>
+          <a href={yogaPodLink} class="btn-pill" style="margin-top:26px; font-size:15.5px; color:#FBF8F1; background:#2B3A2D; padding:15px 24px;">Register through Yoga Pod &rarr;</a>
+          <span style="margin-top:12px; font-size:13px; color:#8A8A7C;">Ticketing link coming soon.</span>
+        </div>
+      </div>
+      <p data-reveal style="margin:28px 0 0; font-size:14.5px; color:rgba(251,248,241,0.7);">Registration links will be added as participating studios confirm their class details. Nearby studios may also join if they express interest.</p>
+    </div>
+  </section>
+
+  <!-- ============ VOLUNTEER + ORGANIZER ============ -->
+  <section style="padding:clamp(64px,8vw,104px) 24px;">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px; align-items:stretch;">
+      <div data-reveal style="background:#EDE5D4; border-radius:18px; padding:clamp(32px,4vw,48px);">
+        <p class="eyebrow">Volunteer</p>
+        <h2 class="section-heading" style="font-size:clamp(26px,3vw,34px); line-height:1.12;">Volunteer at the event</h2>
+        <p style="margin:18px 0 0; font-size:16.5px; line-height:1.7; color:#4A4A42;">Twelve volunteers will help with class transitions, wayfinding, and participant support throughout the day. Volunteers receive free admission to The Wild Animal Sanctuary.</p>
+        <a href={`mailto:${contactEmail}`} class="link-gold" style="margin-top:24px;">Contact Karen Ehrhardt-Martinez &rarr;</a>
+      </div>
+      <div data-reveal style="background:#EDE5D4; border-radius:18px; padding:clamp(32px,4vw,48px);">
+        <p class="eyebrow">Organizer</p>
+        <h2 class="section-heading" style="font-size:clamp(26px,3vw,34px); line-height:1.12;">Organized by Karen Ehrhardt-Martinez</h2>
+        <p style="margin:18px 0 0; font-size:16.5px; line-height:1.7; color:#4A4A42;">Karen is a 15-year Longmont resident and 500-hour certified yoga instructor teaching since 2016. A former environmental sociologist — with work alongside the Ohio Wildlife Center and World Wildlife Fund — her teaching draws on yoga's power to build self-awareness, resilience, and community connection.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" style="padding:clamp(56px,7vw,96px) 24px; background:#EDE5D4;">
+    <div style="max-width:880px; margin:0 auto;">
+      <div data-reveal style="text-align:center; margin-bottom:48px;">
+        <p class="eyebrow">Good to know</p>
+        <h2 class="section-heading" style="font-size:clamp(30px,4vw,46px);">Frequently asked questions</h2>
+      </div>
+      <div data-reveal style="border-top:1px solid rgba(43,58,45,0.16);">
+        <details style="border-bottom:1px solid rgba(43,58,45,0.16);">
+          <summary style="display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px 4px; font-family:'Lora',serif; font-size:20px; color:#2B3A2D;">When is the event?<span style="color:#B58A47; font-size:24px; font-weight:300;">+</span></summary>
+          <p style="margin:0 4px 22px; font-size:16px; line-height:1.7; color:#5A5A50;">The exact date is still being confirmed. The event is planned for a Saturday or Sunday between mid-August and mid-October 2026.</p>
+        </details>
+        <details style="border-bottom:1px solid rgba(43,58,45,0.16);">
+          <summary style="display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px 4px; font-family:'Lora',serif; font-size:20px; color:#2B3A2D;">What does registration include?<span style="color:#B58A47; font-size:24px; font-weight:300;">+</span></summary>
+          <p style="margin:0 4px 22px; font-size:16px; line-height:1.7; color:#5A5A50;">One 60-minute yoga class and a full-day Sanctuary pass — including the elevated walkway, Welcome Center, and Education Center.</p>
+        </details>
+        <details style="border-bottom:1px solid rgba(43,58,45,0.16);">
+          <summary style="display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px 4px; font-family:'Lora',serif; font-size:20px; color:#2B3A2D;">Can I take more than one class?<span style="color:#B58A47; font-size:24px; font-weight:300;">+</span></summary>
+          <p style="margin:0 4px 22px; font-size:16px; line-height:1.7; color:#5A5A50;">Possibly — a second class may be offered for an additional fee. This is still to be determined and will be confirmed before registration opens.</p>
+        </details>
+        <details style="border-bottom:1px solid rgba(43,58,45,0.16);">
+          <summary style="display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px 4px; font-family:'Lora',serif; font-size:20px; color:#2B3A2D;">Are children allowed?<span style="color:#B58A47; font-size:24px; font-weight:300;">+</span></summary>
+          <p style="margin:0 4px 22px; font-size:16px; line-height:1.7; color:#5A5A50;">The yoga event is open to adults and youth ages 14+ with parental permission. Younger children and family members may purchase Sanctuary admission separately through the Sanctuary ticket office.</p>
+        </details>
+        <details style="border-bottom:1px solid rgba(43,58,45,0.16);">
+          <summary style="display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px 4px; font-family:'Lora',serif; font-size:20px; color:#2B3A2D;">Do I need to bring a yoga mat?<span style="color:#B58A47; font-size:24px; font-weight:300;">+</span></summary>
+          <p style="margin:0 4px 22px; font-size:16px; line-height:1.7; color:#5A5A50;">Yes — please bring your own yoga mat. You may also bring your own food and drink or purchase food and beverages onsite.</p>
+        </details>
+        <details style="border-bottom:1px solid rgba(43,58,45,0.16);">
+          <summary style="display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px 4px; font-family:'Lora',serif; font-size:20px; color:#2B3A2D;">Is there a refund policy?<span style="color:#B58A47; font-size:24px; font-weight:300;">+</span></summary>
+          <p style="margin:0 4px 22px; font-size:16px; line-height:1.7; color:#5A5A50;">No refunds are planned if participants choose to cancel.</p>
+        </details>
+        <details style="border-bottom:1px solid rgba(43,58,45,0.16);">
+          <summary style="display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px 4px; font-family:'Lora',serif; font-size:20px; color:#2B3A2D;">Do I need to sign a waiver?<span style="color:#B58A47; font-size:24px; font-weight:300;">+</span></summary>
+          <p style="margin:0 4px 22px; font-size:16px; line-height:1.7; color:#5A5A50;">Yes. Participants will sign a liability waiver that also includes media consent and an option to share contact information with The Wild Animal Sanctuary.</p>
+        </details>
+        <details style="border-bottom:1px solid rgba(43,58,45,0.16);">
+          <summary style="display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px 4px; font-family:'Lora',serif; font-size:20px; color:#2B3A2D;">Is this a guided tour?<span style="color:#B58A47; font-size:24px; font-weight:300;">+</span></summary>
+          <p style="margin:0 4px 22px; font-size:16px; line-height:1.7; color:#5A5A50;">No. Time at the Sanctuary is self-guided, with Sanctuary volunteers available throughout the public areas to answer questions. The event is intentionally simple — no vendor booths, silent auction, or sponsor fair.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING CTA ============ -->
+  <section style="padding:clamp(72px,9vw,120px) 24px; text-align:center;">
+    <div data-reveal style="max-width:760px; margin:0 auto;">
+      <h2 class="section-heading" style="font-size:clamp(32px,5vw,56px); line-height:1.05;">Move with purpose.<br />Practice in service.</h2>
+      <p style="margin:24px 0 0; font-size:18px; line-height:1.7; color:#4A4A42;">Spend the day at the Sanctuary and help support rescued wild animals. 100% of event proceeds go to The Wild Animal Sanctuary.</p>
+      <a href="#register" class="btn-pill" style="display:inline-block; margin-top:32px; font-size:16px; color:#FBF8F1; background:#2B3A2D; padding:17px 36px;">Register for a Class</a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#212C22; color:rgba(251,248,241,0.78); padding:clamp(56px,7vw,84px) 24px 40px;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:40px; padding-bottom:48px; border-bottom:1px solid rgba(251,248,241,0.14);">
+        <div>
+          <p style="margin:0; font-family:'Lora',serif; font-size:24px; color:#FBF8F1; font-weight:600;">Yoga in the Wild</p>
+          <p style="margin:10px 0 0; font-size:14.5px; font-style:italic; font-family:'Lora',serif; color:#D8C28C;">A Practice with Purpose</p>
+        </div>
+        <div>
+          <p class="eyebrow eyebrow--sm eyebrow--light" style="margin-bottom:14px;">Beneficiary</p>
+          <a href="https://www.wildanimalsanctuary.org" target="_blank" rel="noopener" style="font-size:15px; color:#FBF8F1;">The Wild Animal Sanctuary</a>
+          <p style="margin:6px 0 0; font-size:14px;">Keenesburg, Colorado</p>
+        </div>
+        <div>
+          <p class="eyebrow eyebrow--sm eyebrow--light" style="margin-bottom:14px;">Participating studios</p>
+          <p style="margin:0 0 6px; font-size:15px; color:#FBF8F1;">E8 Yoga</p>
+          <p style="margin:0; font-size:15px; color:#FBF8F1;">Yoga Pod</p>
+        </div>
+        <div>
+          <p class="eyebrow eyebrow--sm eyebrow--light" style="margin-bottom:14px;">Organizer</p>
+          <p style="margin:0; font-size:15px; color:#FBF8F1;">Karen Ehrhardt-Martinez</p>
+          <a href={`mailto:${contactEmail}`} style="font-size:14px; color:rgba(251,248,241,0.7); border-bottom:1px solid rgba(251,248,241,0.3); padding-bottom:1px;">Contact for details</a>
+        </div>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; padding-top:28px;">
+        <p style="margin:0; font-size:13.5px; letter-spacing:0.12em; color:#D8C28C;">CONNECTION &nbsp;&bull;&nbsp; COMPASSION &nbsp;&bull;&nbsp; CONSERVATION &nbsp;&bull;&nbsp; COMMUNITY</p>
+        <p style="margin:0; font-size:13px; color:rgba(251,248,241,0.55); max-width:480px;">Organized by Karen Ehrhardt-Martinez in collaboration with Longmont-area yoga studios and The Wild Animal Sanctuary.</p>
+      </div>
+      <p style="margin:28px 0 0; font-size:12px; color:rgba(251,248,241,0.4);">Website designed by Wellspring Ventures, LLC.</p>
+    </div>
+  </footer>
+
+</div>
+</Layout>

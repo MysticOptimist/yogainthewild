@@ -1,0 +1,189 @@
+/* ==========================================================================
+   Yoga in the Wild — Global Styles
+   ========================================================================== */
+
+/* --- Reset & Base --- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #F4EEE2;
+  color: #3C3C34;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+section { scroll-margin-top: 76px; }
+
+/* --- Design Tokens (CSS Custom Properties) --- */
+:root {
+  --ivory:       #F4EEE2;
+  --tan:         #EDE5D4;
+  --sage:        #E3E8D6;
+  --forest:      #2B3A2D;
+  --footer-bg:   #212C22;
+  --cream:       #FBF8F1;
+  --gold:        #B58A47;
+  --gold-light:  #D8C28C;
+  --hero-sand:   #E7D9B6;
+  --charcoal:    #3C3C34;
+  --muted:       #5A5A50;
+  --muted-light: #6B6B5F;
+  --hairline:    rgba(43,58,45,0.12);
+  --hairline-md: rgba(43,58,45,0.16);
+  --hairline-lg: rgba(43,58,45,0.18);
+  --page-pad:    24px;
+  --max-width:   1180px;
+}
+
+/* --- Typography --- */
+.font-serif { font-family: 'Lora', serif; }
+.font-sans  { font-family: 'DM Sans', system-ui, sans-serif; }
+
+/* --- Eyebrow Label --- */
+.eyebrow {
+  margin: 0 0 16px;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gold);
+}
+.eyebrow--light { color: var(--gold-light); }
+.eyebrow--sm { font-size: 12px; letter-spacing: 0.18em; }
+
+/* --- Section Heading --- */
+.section-heading {
+  margin: 0;
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  color: var(--forest);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+
+/* --- Pill Buttons --- */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+}
+.btn-pill:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+/* --- Gridline Container (joined cells with hairline dividers) --- */
+.gridline-container {
+  display: grid;
+  gap: 1px;
+  background: var(--hairline);
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.gridline-cell {
+  background: var(--cream);
+  padding: 30px 28px;
+}
+
+/* --- Content Container --- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--page-pad);
+}
+
+/* --- Scroll Reveal --- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .85s cubic-bezier(.2,.7,.2,1), transform .85s cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
+}
+[data-reveal].revealed {
+  opacity: 1;
+  transform: none;
+}
+.no-js [data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+/* --- FAQ Accordion --- */
+details summary { list-style: none; cursor: pointer; }
+details summary::-webkit-details-marker { display: none; }
+details summary::marker { display: none; }
+
+/* --- Gold underline link --- */
+.link-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--forest);
+  border-bottom: 1.5px solid var(--gold);
+  padding-bottom: 3px;
+  transition: opacity 0.2s;
+}
+.link-gold:hover { opacity: 0.75; }
+
+/* --- Mobile Nav --- */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 60;
+}
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--forest);
+  margin: 5px 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(244,238,226,0.97);
+    backdrop-filter: blur(12px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    z-index: 55;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links a {
+    font-size: 20px !important;
+  }
+}
