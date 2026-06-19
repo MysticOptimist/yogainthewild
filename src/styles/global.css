@@ -175,12 +175,11 @@ details summary::marker { display: none; }
 @media (max-width: 768px) {
   .nav-toggle { display: block; }
   .nav-links {
-    display: none;
+    display: none !important;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
     background: rgba(244,238,226,0.97);
     backdrop-filter: blur(12px);
     flex-direction: column;
@@ -190,7 +189,8 @@ details summary::marker { display: none; }
     z-index: 55;
   }
   .nav-links.open {
-    display: flex;
+    display: flex !important;
+    flex-direction: column;
   }
   .nav-links a {
     font-size: 20px !important;
