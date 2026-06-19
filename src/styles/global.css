@@ -136,6 +136,14 @@ details summary::marker { display: none; }
 }
 .link-gold:hover { opacity: 0.75; }
 
+/* --- Nav (desktop) --- */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
 /* --- Mobile Nav --- */
 .nav-toggle {
   display: none;
@@ -143,6 +151,7 @@ details summary::marker { display: none; }
   border: none;
   cursor: pointer;
   padding: 8px;
+  position: relative;
   z-index: 60;
 }
 .nav-toggle span {
