@@ -80,6 +80,19 @@ section { scroll-margin-top: 76px; }
   transform: translateY(-1px);
 }
 
+/* --- Expect Grid (3x2 → 2x3 → 1x6) --- */
+.expect-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+@media (max-width: 900px) {
+  .expect-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .expect-grid { grid-template-columns: 1fr; }
+}
+
 /* --- Gridline Container (joined cells with hairline dividers) --- */
 .gridline-container {
   display: grid;
