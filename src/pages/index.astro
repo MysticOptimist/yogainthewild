@@ -2,9 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 
-// Ticket links — update Yoga Pod when confirmed
+// Ticket links
 const e8YogaLink = 'https://e8.yoga/events/322cf722-ff00-4212-922e-483460ce8e2b';
-const yogaPodLink = '#';
+const yogaPodLink = 'https://yogapod.com/workshops/yoga-in-the-wild-2026';
 const contactEmail = 'Longmont.Yoga.in.the.Wild@gmail.com';
 const eventDate = 'Saturday, September 26, 2026';
 ---
@@ -85,14 +85,14 @@ const eventDate = 'Saturday, September 26, 2026';
           <span style="display:inline-flex; align-items:center; gap:7px; margin-top:12px; font-size:14px; font-weight:600; color:#FBF8F1; background:#2B3A2D; padding:10px 20px; border-radius:999px;">Buy Tickets &rarr;</span>
         </a>
 
-        <!-- Yoga Pod (link coming soon) -->
-        <div class="sponsor-card sponsor-card--pending">
+        <!-- Yoga Pod -->
+        <a href={yogaPodLink} target="_blank" rel="noopener" class="sponsor-card">
           <span style="display:flex; align-items:center; justify-content:center; height:132px;">
             <img src="/assets/yogapod-logo.png" alt="Yoga Pod logo" style="width:210px; max-width:80%; height:auto; object-fit:contain;" loading="lazy" />
           </span>
           <span style="display:block; margin-top:18px; font-family:'Lora',serif; font-size:20px; color:#2B3A2D; font-weight:600;">Yoga Pod</span>
-          <span style="display:inline-flex; align-items:center; gap:7px; margin-top:12px; font-size:14px; font-weight:600; color:#8A8A7C; background:rgba(43,58,45,0.08); padding:10px 20px; border-radius:999px;">Tickets coming soon</span>
-        </div>
+          <span style="display:inline-flex; align-items:center; gap:7px; margin-top:12px; font-size:14px; font-weight:600; color:#FBF8F1; background:#2B3A2D; padding:10px 20px; border-radius:999px;">Buy Tickets &rarr;</span>
+        </a>
 
       </div>
     </div>
@@ -321,11 +321,10 @@ const eventDate = 'Saturday, September 26, 2026';
           <span class="eyebrow eyebrow--sm" style="margin-bottom:0;">Participating studio</span>
           <h3 style="margin:12px 0 0; font-family:'Lora',serif; font-size:30px; color:#2B3A2D; font-weight:600;">Yoga Pod</h3>
           <p style="margin:14px 0 0; font-size:15.5px; line-height:1.6; color:#5A5A50; flex:1;">Class time and teacher to be confirmed. Tickets are hosted on Yoga Pod's website.</p>
-          <a href={yogaPodLink} class="btn-pill" style="margin-top:26px; font-size:15.5px; color:#FBF8F1; background:#2B3A2D; padding:15px 24px;">Register through Yoga Pod &rarr;</a>
-          <span style="margin-top:12px; font-size:13px; color:#8A8A7C;">Ticketing link coming soon.</span>
+          <a href={yogaPodLink} target="_blank" rel="noopener" class="btn-pill" style="margin-top:26px; font-size:15.5px; color:#FBF8F1; background:#2B3A2D; padding:15px 24px;">Register through Yoga Pod &rarr;</a>
         </div>
       </div>
-      <p data-reveal style="margin:28px 0 0; font-size:14.5px; color:rgba(251,248,241,0.7);">Registration links will be added as participating studios confirm their class details. Nearby studios may also join if they express interest.</p>
+      <p data-reveal style="margin:28px 0 0; font-size:14.5px; color:rgba(251,248,241,0.7);">Each studio manages its own registration and class details. Nearby studios may also join if they express interest.</p>
     </div>
   </section>
 

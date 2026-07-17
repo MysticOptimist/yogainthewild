@@ -96,9 +96,6 @@ a.sponsor-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 28px rgba(43,58,45,0.12);
 }
-.sponsor-card--pending {
-  opacity: 0.92;
-}
 
 /* --- Expect Grid (3x2 → 2x3 → 1x6) --- */
 .expect-grid {
