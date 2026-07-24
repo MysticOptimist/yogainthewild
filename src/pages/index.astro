@@ -5,6 +5,7 @@ import '../styles/global.css';
 // Ticket links
 const e8YogaLink = 'https://e8.yoga/events/322cf722-ff00-4212-922e-483460ce8e2b';
 const yogaPodLink = 'https://yogapod.com/workshops/yoga-in-the-wild-2026';
+const donateLink = 'https://spot.fund/drjbx6ssc';
 const contactEmail = 'Longmont.Yoga.in.the.Wild@gmail.com';
 const eventDate = 'Saturday, September 26, 2026';
 ---
@@ -33,6 +34,7 @@ const eventDate = 'Saturday, September 26, 2026';
         <a href="#sanctuary" style="font-size:14.5px; color:#4A4A42; font-weight:500;">Sanctuary</a>
         <a href="#studios" style="font-size:14.5px; color:#4A4A42; font-weight:500;">Studios</a>
         <a href="#faq" style="font-size:14.5px; color:#4A4A42; font-weight:500;">FAQ</a>
+        <a href="#donate" style="font-size:14.5px; color:#4A4A42; font-weight:500;">Donate</a>
         <a href="#register" class="btn-pill" style="font-size:14px; font-weight:600; color:#FBF8F1; background:#2B3A2D; padding:10px 20px;">Register</a>
       </nav>
     </div>
@@ -61,9 +63,10 @@ const eventDate = 'Saturday, September 26, 2026';
           <a href="#register" class="btn-pill" style="font-size:15.5px; color:#2B3A2D; background:#E7D9B6; padding:15px 28px;">Register for the Event</a>
           <a href="#sanctuary" class="btn-pill" style="font-size:15.5px; font-weight:500; color:#FBF8F1; border:1.5px solid rgba(251,248,241,0.45); padding:15px 26px;">Learn About the Sanctuary</a>
         </div>
-        <p style="margin:26px 0 0; font-size:14px; color:rgba(251,248,241,0.82); display:flex; align-items:center; gap:9px;">
+        <p style="margin:26px 0 0; font-size:14px; color:rgba(251,248,241,0.82); display:flex; align-items:center; gap:9px; flex-wrap:wrap;">
           <span style="width:7px; height:7px; border-radius:50%; background:#B58A47;"></span>
-          100% of event proceeds go to The Wild Animal Sanctuary.
+          <span>100% of event proceeds go to The Wild Animal Sanctuary.</span>
+          <a href={donateLink} target="_blank" rel="noopener" style="color:#E7D9B6; font-weight:600; border-bottom:1.5px solid rgba(183,138,71,0.9); padding-bottom:1px;">Donate directly &rarr;</a>
         </p>
       </div>
     </div>
@@ -328,6 +331,19 @@ const eventDate = 'Saturday, September 26, 2026';
     </div>
   </section>
 
+  <!-- ============ DONATE DIRECTLY ============ -->
+  <section id="donate" style="padding:clamp(56px,7vw,88px) 24px; background:#EDE5D4; border-top:1px solid rgba(43,58,45,0.10);">
+    <div data-reveal style="max-width:720px; margin:0 auto; text-align:center;">
+      <p class="eyebrow" style="text-align:center;">Can't make it? Give directly</p>
+      <h2 class="section-heading" style="font-size:clamp(28px,3.6vw,44px);">Support The Sanctuary — no ticket required</h2>
+      <p style="margin:20px auto 0; max-width:620px; font-size:17px; line-height:1.7; color:#4A4A42;">Every gift helps provide food, space, and lifelong care for hundreds of rescued wild animals. Donate directly through our event fundraiser — whether you're joining us on September 26 or simply want to help from afar. Attendees are welcome to give beyond the ticket price, too. 100% of your donation supports The Wild Animal Sanctuary.</p>
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:18px; margin:34px 0 0;">
+        <a href={donateLink} target="_blank" rel="noopener" class="btn-pill" style="font-size:15.5px; color:#FBF8F1; background:#2B3A2D; padding:16px 32px;">Donate to the Fundraiser &rarr;</a>
+        <a href="#register" class="link-gold">Or register for the event &rarr;</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ VOLUNTEER + ORGANIZER ============ -->
   <section style="padding:clamp(64px,8vw,104px) 24px;">
     <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px; align-items:stretch;">
@@ -399,6 +415,7 @@ const eventDate = 'Saturday, September 26, 2026';
       <h2 class="section-heading" style="font-size:clamp(32px,5vw,56px); line-height:1.05;">Move with purpose.<br />Practice in service.</h2>
       <p style="margin:24px 0 0; font-size:18px; line-height:1.7; color:#4A4A42;">Spend the day at the Sanctuary and help support rescued wild animals. 100% of event proceeds go to The Wild Animal Sanctuary.</p>
       <a href="#register" class="btn-pill" style="display:inline-block; margin-top:32px; font-size:16px; color:#FBF8F1; background:#2B3A2D; padding:17px 36px;">Register for the Event</a>
+      <p style="margin:22px 0 0; font-size:15px; color:#5A5A50;">Not able to attend? <a href={donateLink} target="_blank" rel="noopener" style="color:#2B3A2D; font-weight:600; border-bottom:1.5px solid #B58A47; padding-bottom:2px;">Donate directly to the fundraiser &rarr;</a></p>
     </div>
   </section>
 
@@ -413,7 +430,8 @@ const eventDate = 'Saturday, September 26, 2026';
         <div>
           <p class="eyebrow eyebrow--sm eyebrow--light" style="margin-bottom:14px;">Beneficiary</p>
           <a href="https://www.wildanimalsanctuary.org" target="_blank" rel="noopener" style="font-size:15px; color:#FBF8F1;">The Wild Animal Sanctuary</a>
-          <p style="margin:6px 0 0; font-size:14px;">Keenesburg, Colorado</p>
+          <p style="margin:6px 0 12px; font-size:14px;">Keenesburg, Colorado</p>
+          <a href={donateLink} target="_blank" rel="noopener" style="font-size:14px; color:#D8C28C; border-bottom:1px solid rgba(216,194,140,0.5); padding-bottom:1px;">Donate to the fundraiser &rarr;</a>
         </div>
         <div>
           <p class="eyebrow eyebrow--sm eyebrow--light" style="margin-bottom:14px;">Participating studios</p>
