@@ -8,6 +8,43 @@ const yogaPodLink = 'https://yogapod.com/workshops/yoga-in-the-wild-2026';
 const donateLink = 'https://spot.fund/drjbx6ssc';
 const contactEmail = 'Longmont.Yoga.in.the.Wild@gmail.com';
 const eventDate = 'Saturday, September 26, 2026';
+
+// Teachers — presented in class-time order. `photo: null` renders an
+// initials placeholder until a headshot is added under /assets/teachers/.
+const teachers = [
+  {
+    slot: 'Class #1 · 10:00 AM',
+    studio: 'Yoga Pod',
+    names: 'Kevin Flynn & Cree Lawrence',
+    photo: '/assets/teachers/cree-kevin.jpg',
+    initials: 'K&C',
+    bio: 'Cree and Kevin are a Longmont, Colorado–based yoga and wellness team creating inclusive, heart-centered experiences for practitioners of all levels. Cree teaches Vinyasa, VinYin, Yin, Restorative, Hot yoga, and weighted workouts, weaving breathwork, creative transitions, stillness, and meditation into her classes. Kevin (E-RYT 500, certified health coach, psychology student) blends play, discipline, and intentional breathing, sharing clear alignment cues and relevant science about posture, breathwork, and mindfulness. Together they lead outdoor classes, festival classes, and retreats.',
+  },
+  {
+    slot: 'Class #2 · 12:00 PM',
+    studio: 'E8 Yoga',
+    names: 'Karen Ehrhardt-Martinez & Jennifer Maddox',
+    photo: ['/assets/Karen-Ehrhardt-Martinez.webp', '/assets/jennifer-maddox.webp'],
+    initials: 'K&J',
+    bio: "Karen's enthusiasm for teaching yoga is rooted in its ability to inspire a healthy lifestyle, be of service to others, and help students believe deeply in their inner voice. A 16-year Longmont resident and 500-hour certified instructor teaching since 2016, she is the event organizer for the Yoga in the Wild Fundraiser. Jennifer discovered yoga in 2016 and, after a 22-year corporate career, followed her heart to teach. An E-RYT 500 and Yoga Medicine® Registered Therapeutic Specialist, she specializes in making yoga accessible for every body, blending movement, breathwork, mindfulness, and compassion.",
+  },
+  {
+    slot: 'Class #3 · 2:00 PM',
+    studio: 'E8 Yoga',
+    names: 'Amanda Meader',
+    photo: '/assets/Amanda-Meader.webp',
+    initials: 'AM',
+    bio: 'Amanda has been practicing yoga since 2004 and teaching since 2015. Specializing in Integrated Vinyasa™, she blends strength, mindful movement, and breath-centered flow to create an accessible, empowering practice for all levels. She holds a 200-hour Yoga Alliance certification, a 300-hour Integrated Vinyasa™ training, and certifications in Inferno Hot Pilates, Aerial Yoga®, and AFAA Fitness. Her classes emphasize safe alignment, intentional movement, and accessibility — a welcoming space to build strength and deepen the connection between mind and body.',
+  },
+  {
+    slot: 'Class #4 · 4:00 PM',
+    studio: 'Yoga Pod',
+    names: 'Derise Anjanette & Matt Kalinus',
+    photo: '/assets/teachers/derise-matt.jpg',
+    initials: 'D&M',
+    bio: "This husband-and-wife duo share over four decades of combined teaching experience and are one of Boulder's most recognized instructor couples. Their classes are warm, inclusive, and highly supportive of new students. Matt brings a distinct levity, encouraging students to cultivate kindness and curiosity toward their whole experience, while Derise's colorful sequencing challenges students in body and mind. Big fans of the Sanctuary, they can attest to the magic of being there at sunset when the lions, tigers, and wolves announce their existence to the world.",
+  },
+];
 ---
 
 <Layout title="Yoga in the Wild — A Practice with Purpose">
@@ -30,6 +67,7 @@ const eventDate = 'Saturday, September 26, 2026';
       <nav class="nav-links">
         <a href="#about" style="font-size:14.5px; color:#4A4A42; font-weight:500;">About</a>
         <a href="#schedule" style="font-size:14.5px; color:#4A4A42; font-weight:500;">Schedule</a>
+        <a href="#teachers" style="font-size:14.5px; color:#4A4A42; font-weight:500;">Teachers</a>
         <a href="#included" style="font-size:14.5px; color:#4A4A42; font-weight:500;">What's Included</a>
         <a href="#sanctuary" style="font-size:14.5px; color:#4A4A42; font-weight:500;">Sanctuary</a>
         <a href="#studios" style="font-size:14.5px; color:#4A4A42; font-weight:500;">Studios</a>
@@ -175,7 +213,10 @@ const eventDate = 'Saturday, September 26, 2026';
       <div data-reveal style="border-top:1px solid rgba(43,58,45,0.16);">
         <div style="display:flex; align-items:baseline; gap:clamp(16px,4vw,48px); padding:24px 4px; border-bottom:1px solid rgba(43,58,45,0.12); flex-wrap:wrap;">
           <span style="font-family:'Lora',serif; font-size:22px; color:#B58A47; min-width:160px; font-weight:500;">10:00 &ndash; 11:00 AM</span>
-          <span style="font-size:19px; color:#2B3A2D; font-weight:500;">Class #1 &mdash; All-Levels Vinyasa</span>
+          <span style="display:flex; flex-direction:column; gap:4px;">
+            <span style="font-size:19px; color:#2B3A2D; font-weight:500;">Class #1 &mdash; All-Levels Vinyasa</span>
+            <span style="font-size:14.5px; color:#6B6B5F;">Kevin Flynn &amp; Cree Lawrence &middot; Yoga Pod</span>
+          </span>
         </div>
         <div style="display:flex; align-items:baseline; gap:clamp(16px,4vw,48px); padding:24px 4px; border-bottom:1px solid rgba(43,58,45,0.12); flex-wrap:wrap; background:rgba(183,138,71,0.07);">
           <span style="font-family:'Lora',serif; font-size:22px; color:#B58A47; min-width:160px; font-weight:500;">11:15 &ndash; 11:45 AM</span>
@@ -186,11 +227,17 @@ const eventDate = 'Saturday, September 26, 2026';
         </div>
         <div style="display:flex; align-items:baseline; gap:clamp(16px,4vw,48px); padding:24px 4px; border-bottom:1px solid rgba(43,58,45,0.12); flex-wrap:wrap;">
           <span style="font-family:'Lora',serif; font-size:22px; color:#B58A47; min-width:160px; font-weight:500;">12:00 &ndash; 1:00 PM</span>
-          <span style="font-size:19px; color:#2B3A2D; font-weight:500;">Class #2 &mdash; All-Levels Vinyasa</span>
+          <span style="display:flex; flex-direction:column; gap:4px;">
+            <span style="font-size:19px; color:#2B3A2D; font-weight:500;">Class #2 &mdash; All-Levels Vinyasa</span>
+            <span style="font-size:14.5px; color:#6B6B5F;">Karen Ehrhardt-Martinez &amp; Jennifer Maddox &middot; E8 Yoga</span>
+          </span>
         </div>
         <div style="display:flex; align-items:baseline; gap:clamp(16px,4vw,48px); padding:24px 4px; border-bottom:1px solid rgba(43,58,45,0.12); flex-wrap:wrap;">
           <span style="font-family:'Lora',serif; font-size:22px; color:#B58A47; min-width:160px; font-weight:500;">2:00 &ndash; 3:00 PM</span>
-          <span style="font-size:19px; color:#2B3A2D; font-weight:500;">Class #3 &mdash; All-Levels Vinyasa</span>
+          <span style="display:flex; flex-direction:column; gap:4px;">
+            <span style="font-size:19px; color:#2B3A2D; font-weight:500;">Class #3 &mdash; All-Levels Vinyasa</span>
+            <span style="font-size:14.5px; color:#6B6B5F;">Amanda Meader &middot; E8 Yoga</span>
+          </span>
         </div>
         <div style="display:flex; align-items:baseline; gap:clamp(16px,4vw,48px); padding:24px 4px; border-bottom:1px solid rgba(43,58,45,0.12); flex-wrap:wrap; background:rgba(183,138,71,0.07);">
           <span style="font-family:'Lora',serif; font-size:22px; color:#B58A47; min-width:160px; font-weight:500;">3:15 &ndash; 3:45 PM</span>
@@ -201,8 +248,40 @@ const eventDate = 'Saturday, September 26, 2026';
         </div>
         <div style="display:flex; align-items:baseline; gap:clamp(16px,4vw,48px); padding:24px 4px; border-bottom:1px solid rgba(43,58,45,0.12); flex-wrap:wrap;">
           <span style="font-family:'Lora',serif; font-size:22px; color:#B58A47; min-width:160px; font-weight:500;">4:00 &ndash; 5:00 PM</span>
-          <span style="font-size:19px; color:#2B3A2D; font-weight:500;">Class #4 &mdash; All-Levels Vinyasa</span>
+          <span style="display:flex; flex-direction:column; gap:4px;">
+            <span style="font-size:19px; color:#2B3A2D; font-weight:500;">Class #4 &mdash; All-Levels Vinyasa</span>
+            <span style="font-size:14.5px; color:#6B6B5F;">Derise Anjanette &amp; Matt Kalinus &middot; Yoga Pod</span>
+          </span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MEET YOUR TEACHERS ============ -->
+  <section id="teachers" style="padding:clamp(64px,8vw,104px) 24px; background:#E3E8D6;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div data-reveal style="max-width:640px; margin-bottom:clamp(40px,5vw,56px);">
+        <p class="eyebrow">Your instructors</p>
+        <h2 class="section-heading" style="font-size:clamp(30px,4vw,46px);">Meet your teachers</h2>
+        <p style="margin:18px 0 0; font-size:17px; line-height:1.7; color:#4A4A42;">Each 60-minute class is led by experienced instructors from our participating Longmont-area studios. Here's who you'll practice with.</p>
+      </div>
+      <div data-reveal class="teacher-grid">
+        {teachers.map((t) => (
+          <article class="teacher-card">
+            <div class={Array.isArray(t.photo) ? 'teacher-photo teacher-photo--split' : 'teacher-photo'}>
+              {Array.isArray(t.photo)
+                ? t.photo.map((src, i) => <img src={src} alt={`${t.names.split(' & ')[i] ?? t.names} — ${t.studio}`} loading="lazy" />)
+                : t.photo
+                  ? <img src={t.photo} alt={`${t.names} — ${t.studio}`} loading="lazy" />
+                  : <span class="teacher-initials" aria-hidden="true">{t.initials}</span>}
+            </div>
+            <div class="teacher-body">
+              <p class="teacher-slot">{t.slot} &middot; {t.studio}</p>
+              <h3 class="teacher-names">{t.names}</h3>
+              <p class="teacher-bio">{t.bio}</p>
+            </div>
+          </article>
+        ))}
       </div>
     </div>
   </section>
